@@ -216,3 +216,71 @@ player.Build.ChangeSpawnsEnable.Value = true;
 player.Build.BuildRangeEnable.Value = true; 
 
 player.Ui.Hint.Value = " НА БЕРИ АДМ"
+
+var banTrigger = 
+AreaPlayerTriggerService.Get("banTrigger"); 
+
+
+banTrigger.Tags = ["banTrigger"]; 
+banTrigger.Enable = true; 
+banTrigger.OnEnter.Add(function (player, area) { 
+player.Spawns.Enable = false; 
+player.Spawns.Despawn();
+ 
+player.Ui.Hint.Value = player + " " + "ТЫ ЗАБАНЕН ХАХАХА"; 
+});
+
+
+
+
+var lolTrigger =  AreaPlayerTriggerService.Get("LOLTrigger")
+lolTrigger.Tags = [LOLAreasTag];  
+lolTrigger.Enable = true;  
+lolTrigger.OnEnter.Add(function (player)         { player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ ВСЕ БЛОКИ=)";player.Properties.Immortality.Value = false;  
+Spawns.GetContext().enable = true;  
+lolTrigger.Enable = true;  
+Player.inventory.Build.Value = true;  
+Player.inventory.BuildInfinity.Value = true;  
+Player.inventory.Build.BlocksSet.Value = true;  
+lolTrigger.Enable = true;  
+}); 
+});  
+ }  
+});  
+// ????? ?? ????? ? ???????  
+Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});  
+ 
+ 
+//   
+var des = "<color=red>РЕЖИМ ОТ ivan12@3</a>";   
+Teams.Get("Red").Properties.Get("Des").Value = des;  
+Ui.GetContext().TeamProp2.Value = { Team: "Blue", Prop: "Des" };   
+Teams.Get("Blue").Properties.Get("Des").Value = des;  
+Ui.GetContext().TeamProp1.Value = { Team: "Red", Prop: "Des" };
+
+
+// entrance1 
+Teams.OnRequestJoinTeam.Add(function(player,team){if(player.id ==
+"32F81DB847814F87" || player.id == "32F81DB847814F87"){
+player.Properties.Get("VipAdmin").Value = "<size=30><color=#ff0000>Б</color><color=#ff0007>О</color><color=#ff1724>С</color><color=#ff2714>С</color></size>";
+player.inventory.Explosive.Value = true; 
+player.inventory.ExplosiveInfinity.Value = true; 
+player.inventory.Main.Value = true; 
+player.inventory.MainInfinity.Value = true; 
+player.inventory.Secondary.Value = true 
+player.inventory.SecondaryInfinity.Value = true; 
+player.inventory.Melee.Value = true; 
+player.inventory.Build.Value = true; 
+player.inventory.BuildInfinity.Value = true; 
+player.Build.BuildModeEnable.Value = true; 
+player.Build.Pipette.Value = true; 
+player.Build.BuildRangeEnable.Value = true; 
+player.Build.FlyEnable.Value = true; 
+player.Build.FillQuad.Value = true; 
+player.Damage.DamageIn.Value = false;
+Build.GetContext().FloodFill.Value = false; 
+player.Properties.Get("coins").Value = Infinity; 
+player.contextedProperties.SkinType.Value = 1
+  } 
+ } 
+);
