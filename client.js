@@ -281,11 +281,7 @@ player.Damage.DamageIn.Value = false;
 Build.GetContext().FloodFill.Value = false; 
 player.Properties.Get("coins").Value = Infinity; 
 player.contextedProperties.SkinType.Value = 1
-  } 
- } 
-);
-
-
+  
 var НОЖ =                         AreaPlayerTriggerService.Get("НОЖ"); НОЖ.Tags =["НОЖ"];                   НОЖ.Enable = true;                    НОЖ.OnEnter.Add(function(player,area){
 
 
@@ -577,7 +573,7 @@ player.inventory.Explosivelnfinity.Value = true;
 
 
 player.inventory.Build.Value = true;
-player.inventory.Buildlnfinity.Value = true;
+player.inventory.Buildlnfinity.Value = tue;
 
 
 player.Build.BlocksSet.Value = BuildBlocksSet.AllClear;
@@ -589,7 +585,7 @@ player.Build.BlocksSet.Value = BuildBlocksSet.AllClear;
  100.OnEnter.add(function(player.area){
   player.Properties.Get(LeaderBoardProp).Value += 100;
   player.Ui.Hint.Value ="ТЫ ПОЛУЧАЕШЬ 100 МОНЕТ";
-  )};
-   
-
+ }
+} 
+);
                                                         
