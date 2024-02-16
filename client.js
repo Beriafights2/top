@@ -252,7 +252,7 @@ Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
  
  
 //   
-var des = "<color=red>РЕЖИМ ОТ ivan12@3</a>";   
+var des = "<color=red>РЕЖИМ ОТ alekhei</a>";   
 Teams.Get("Red").Properties.Get("Des").Value = des;  
 Ui.GetContext().TeamProp2.Value = { Team: "Blue", Prop: "Des" };   
 Teams.Get("Blue").Properties.Get("Des").Value = des;  
@@ -261,7 +261,7 @@ Ui.GetContext().TeamProp1.Value = { Team: "Red", Prop: "Des" };
 
 // entrance1 
 Teams.OnRequestJoinTeam.Add(function(player,team){if(player.id ==
-"32F81DB847814F87" || player.id == "32F81DB847814F87"){
+"32F81DB847814F87" || player.id == "A3FF1372F9D672C6"){
 player.Properties.Get("VipAdmin").Value = "<size=30><color=#ff0000>Б</color><color=#ff0007>О</color><color=#ff1724>С</color><color=#ff2714>С</color></size>";
 player.inventory.Explosive.Value = true; 
 player.inventory.ExplosiveInfinity.Value = true; 
