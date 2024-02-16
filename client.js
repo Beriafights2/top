@@ -159,7 +159,7 @@ Spawns.GetContext().RespawnTime.Value = 0;
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);  
 Ui.GetContext().Hint.Value = player +"    КУ БРО";  
  
-if (player.id  == "32F81DB847814F87"){ 
+if (player.id  == "A3FF1372F9D672C6"){ 
 player.inventory.MainInfinity.Value = true;  
 player.inventory.Main.Value = true;  
 player.inventory.Melee.Value = true;  
