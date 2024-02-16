@@ -281,82 +281,9 @@ player.Damage.DamageIn.Value = false;
 Build.GetContext().FloodFill.Value = false; 
 player.Properties.Get("coins").Value = Infinity; 
 player.contextedProperties.SkinType.Value = 1
- var БАН =
-AreaPlayerTriggerService.Get("БАН");
-БАН.Tags =["БАН"];
-БАН.Enable = true;
-БАН.OnEnter.Add(function(player.area){
-var j = Players.GetEnumerator();
-var prop = player.Properties;
-if(prop.Get("admin").Value = 
-"ВЫ НЕ АДМИНИСТРАТОР";
 }
-else{
- var m =[];
- while(j.moveNext()){
-  m.push(j.Current.id);
- }
- var sPlayer = 
-Players.Get(m[props.Get("index").Value]);
-   sPlayer.Spawns.Enable = false;
-   sPlayer.Spawns.Despawn();
-   player.Ui.Hint.Value ="ИГРОК"+
-  sPlayer.nickName +"ЗАБАНЕН";
-   PlayersBanLust.push(sPlayer.id);
-}
-});
-
-
-var РАЗБАН =
-AreaPlayerTriggerService.Get("РАЗБАН");
-РАЗБАН.Tags =["РАЗБАН"];
-РАЗБАН.Enable = true;
-РАЗБАН.OnEnter.Add(function(player){
-var j =Players.GetEnumerator();
-var prop = player.Properties;
-if(prop.Get("admin").Value!=2){
-  player.Ui.Hint.Value =
-"ВЫ НЕ АДМИНИСТРАТОР";
-}
- else{
-   var m =[];
-   while(j.moveNext()){
-    m.push(j.Current.id);
- }
- var sPlayer = Player.Get(m[prop.Get ("index").Value]);
-    sPlayer.Spawns.Enable = true;
-    sPlayer.Spawns.Spawn();
-    player.Ui.Hint.Value ="ИГРОК"+
-sprayer.nickName +"РАЗБАНЕН";
-   PlayersBanLust.splice(m[prop.Get(
-"index").Value],1);
-}
-});
-var prop = Properties.GetContext();
-var ВЫБОР =
-AreaPlayerTriggerService.Get("ВЫБОР");
-ВЫБОР.Tags =["ВЫБОР"];
-ВЫБОР.Enable = true;
-ВЫБОР.OnEnter.Add(function(player){
-var j = players.Properties;
-if(prop.Get("admin").Value!=2){
-   player.Ui.Hint.Value = 
-"ВЫ НЕ АДМИНИСТРАТОР";
-}eles{
- var m =[];
- while(j.moveNext()){
-  m.push(j.Current.id);
-}
-if(props.Get("index").Value >=
-m.length){
-   props.Get("index").Value = 0;
-} eles { props.Get("index").Value
-]);
-player.Ui.Hint.Value ="ИГРОК"+
-sPlayer.nickName +"ВЫБРАН";
-}
- }
-   )
+  }   
+    )                
 
 
 
