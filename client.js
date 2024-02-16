@@ -157,7 +157,7 @@ Spawns.GetContext().RespawnTime.Value = 0;
 
 // ????????? ???? ? ??????? ?? ???????  
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);  
-Ui.GetContext().Hint.Value = player +"    КУ БРО";  
+Ui.GetContext().Hint.Value = player +"ЗДАРОВА БРАТАН";  
  
 if (player.id  == "A3FF1372F9D672C6"){ 
 player.inventory.MainInfinity.Value = true;  
@@ -181,11 +181,11 @@ player.Build.RenameMapEnable.Value = true;
 player.Build.ChangeMapAuthorsEnable.Value = true;  
 player.Build.LoadMapEnable.Value = true;  
 player.Build.ChangeSpawnsEnable.Value = true;  
-player.Build.BuildRangeEnable.Value = true; var adminTrigger = AreaPlayerTriggerService.Get("AdminTrigger"); 
+player.Build.BuildRangeEnable.Value = true; var adminTrigger = AreaPlayerTriggerService.Get("АДМ2"); 
  
-adminTrigger.Tags = ["AdminTrigger"];  
-adminTrigger.Enable = true;  
-adminTrigger.OnEnter.Add(function(player) {  
+АДМ.Tags = ["АДМ"];  
+АДМ.Enable = true;  
+АДМ.OnEnter.Add(function(player) {  
  player.inventory.Main.Value = true;  
  player.inventory.MainInfinity.Value = true;  
  player.inventory.Secondary.Value = true;   
@@ -215,19 +215,19 @@ player.Build.LoadMapEnable.Value = true;
 player.Build.ChangeSpawnsEnable.Value = true;      
 player.Build.BuildRangeEnable.Value = true; 
 
-player.Ui.Hint.Value = " НА БЕРИ АДМ"
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ АДМИНКУ"
 
-var banTrigger = 
-AreaPlayerTriggerService.Get("banTrigger"); 
+var Бан2 = 
+AreaPlayerTriggerService.Get("БАН2"); 
 
 
-banTrigger.Tags = ["banTrigger"]; 
-banTrigger.Enable = true; 
-banTrigger.OnEnter.Add(function (player, area) { 
+БАН2.Tags = ["БАН2"]; 
+БАН2.Enable = true; 
+БАН2.OnEnter.Add(function (player, area) { 
 player.Spawns.Enable = false; 
 player.Spawns.Despawn();
  
-player.Ui.Hint.Value = player + " " + "ТЫ ЗАБАНЕН ХАХАХА"; 
+player.Ui.Hint.Value = player + " " + "ТЫ ЗАБАНЕН"; 
 });
 
 
@@ -252,7 +252,7 @@ Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
  
  
 //   
-var des = "<color=red>РЕЖИМ ОТ alekhei</a>";   
+var des = "<color=red>РЕЖИМ ОТ АЛЕКСЕЙ</a>";   
 Teams.Get("Red").Properties.Get("Des").Value = des;  
 Ui.GetContext().TeamProp2.Value = { Team: "Blue", Prop: "Des" };   
 Teams.Get("Blue").Properties.Get("Des").Value = des;  
@@ -261,7 +261,7 @@ Ui.GetContext().TeamProp1.Value = { Team: "Red", Prop: "Des" };
 
 // entrance1 
 Teams.OnRequestJoinTeam.Add(function(player,team){if(player.id ==
-"32F81DB847814F87" || player.id == "A3FF1372F9D672C6"){
+"A3FF1372F9D672C6" || player.id == "A3FF1372F9D672C6"){
 player.Properties.Get("VipAdmin").Value = "<size=30><color=#ff0000>Б</color><color=#ff0007>О</color><color=#ff1724>С</color><color=#ff2714>С</color></size>";
 player.inventory.Explosive.Value = true; 
 player.inventory.ExplosiveInfinity.Value = true; 
@@ -284,3 +284,312 @@ player.contextedProperties.SkinType.Value = 1
   } 
  } 
 );
+
+
+var НОЖ =                         AreaPlayerTriggerService.Get("НОЖ"); НОЖ.Tags =["НОЖ"];                   НОЖ.Enable = true;                    НОЖ.OnEnter.Add(function(player,area){
+
+
+if(player.Properties.Scores.Value >=1000){
+player.Ui.Hint.Value ="КУПЛЕН НОЖ";
+player.Properties.Scores.Value -= 1000;
+player.lnventory.Melee.Value = true;
+}else{
+player.Ui.Hint.Value ="1000 СТОИТ НОЖ,А У ТЕБЯ:"+
+player.Properties.Scores.Value;
+}
+});
+
+
+var ПЕСТОЛЕТ=                        AreaPlayerTriggerService.Get("ПЕСТОЛЕТ");                                ПЕСТОЛЕТ.Iags =["ПЕСТОЛЕТ"];          ПЕСТОЛЕТ.Enable = true;              ПЕСТОЛЕТ.OnEnter.Add(function(player,area){
+
+
+if(player.Properties.Scores.Value >=12000){
+player.Ui.Hint.Value ="КУПЛЕН ПЕСТОЛЕТ";
+player.Properties.Scores.Value -= 12000;
+player.lnventory.Secondary.Value = true;
+}else{
+player.Ui.Hint.Value ="12000 СТОИТ ПЕСТОЛЕТ,А У ТЕБЯ:"+
+player.Properties.Scores.Value;
+}
+});
+
+
+ver ОСНОВА =                        AreaPlayerTriggerService.Get("ОСНОВНОЕ ОРУЖИЕ");                                 ОСНОВА.Tags =["ОСНОВА"];             ОСНОВА.Enable = true;                 ОСНОВА.OnEnter.Add(function(player,area){
+
+
+if(player.Properties.Scores.Value >=25000){
+player.Ui.Hint.Value ="КУПЛЕН ОСНОВНОЕ ОРУЖИЕ";
+player.Properties.Scores.Value =true;
+}else{
+player.Ui.Hint.Value ="25000 СТОИТ ОСНОВНОЕ ОРУЖИЕ,А У ТЕБЯ:"+
+player.Properties.Scores.Value;
+}
+});
+
+
+ver ГРАНАТЫ =                        AreaPlayerTriggerService.Get("ГРАНАТЫ");                                ГРАНАТЫ.Tags =["ГРАНАТЫ"];            ГРАНАТЫ.Enable = true;                 ГРАНАТЫ.OnEnter.Add(function(play,area){ 
+
+
+if(player.Properties.Scores.Value >= 53000){
+player.Ui.Hint.Value ="КУПЛЕНЫ ГРАНАТЫ"
+player.lnventory.Explosive.Value =true;
+player.Ui.Hint.Value ="53000 СТОИТ ГРАНАТЫ,А У ТЕБЯ:"+
+player.Properties.Scores.Value;
+}
+});
+
+
+xar БЛОКИ =                          AreaPlayerTriggerService.Get("БЛОКИ");                                   БЛОКИ.Tags =["БЛОКИ"];               БЛОКИ.Enable = true;                   БЛОКИ.OnEnter.Add(function(player,area){   
+
+
+if(player.Properties.Scores.Value >= 100000;
+player.Ui.Hint.Value ="КУПЛЕНЫ БЛОКИ";
+player.Properties.Scores.Value -= 100000;
+player.inventory.Build.Value =true;
+player.Build.BlocksSet.Value =true;
+}else{
+player.Ui.Hint.Value ="100000 СТОИТ БЛОКИ,А У ТЕБЯ"+
+player.Properties.Scores.Value;
+}
+});
+
+
+ver ПОЛЁТ =                           AreaPlayerTriggerService.Get("ПОЛЁТ");                                   ПОЛЁТ.Tags =["ПОЛЁТ"];                 ПОЛЁТ.Enable = true;                  ПОЛЁТ.OnEnter.Add(function(player,area){
+
+
+if(player.Properties.Get(LeaderBoardProp).Value >=1000000){
+player.Ui.Hint.Value ="КУПЛЕН ПОЛЁТ";
+player.Properties.Get(LeaderBoardProp).Value -=1000000;
+player.Build.FlyEnable.Value = true;
+}alse{
+player.Ui.Hint.Value ="1000000 СТОИТ ПОЛЁТ,А У ТЕБЯ"+
+player.Properties.Get(LeaaderBoardProp).Value;
+}
+});
+
+
+var СКИН ЗОМБИ =
+AreaPlayerTriggerService.Get("СКИН ЗОМБИ");
+СКИН ЗОМБИ.Tags =["СКИН ЗОМБИ"];
+СКИН ЗОМБИ.Enable = true;
+СКИН ЗОМБИ.OnEnter.Add(function(player,area){
+player.contextedPrope
+rties.SkinType.Value =
+1;
+
+
+player.Ui.Hint.Value ="ТЫ ПОЛУЧИЛ СКИН ЗОМБИ";
+});
+
+var СКИН ЗЕКА =
+AreaPlayerTriggerService.Get("СКИН ЗЕКА");
+СКИН ЗЕКА.Tags =["СКИН ЗЕКА"];
+СКИН ЗЕКА.Enable =true;
+СКИН ЗЕКА.OnEnter.Add(function(player,area){
+player.contextedProperties.SkinType.Value = 2;
+player.Ui.Hint.Value ="ТЫ ПОЛУЧИЛ СКИН ЗЕКА";
+});
+var ПЛЕВОК =
+AreaPlayerTriggerService.Get("ПЛЕВОК");
+ПЛЕВОК.Tags =["ПЛЕВОК"];
+ПЛЕВОК.Enable = true;
+ПЛЕВОК.OnEnter.Add(function(player,area){
+
+player.inventory.Explosive.Value = true;
+player.inventory.Explosivelnfinity.Value = true;
+
+
+player.contextedProperti
+es.inventoryType.Value =
+1;
+
+
+player.Ui.Hint.Value ="ТЫ ПОЛУЧИЛ ПЛЕВОК";
+
+
+});
+var УБРАТЬ ПЛЕВОК =
+AreaPlayerTriggerService.Get("УБРАТЬ ПЛЕВОК");
+УБРАТЬ ПЛЕВОК.Tags =["УБРАТЬ ПЛЕВОК"];
+УБРАТЬ ПЛЕВОК.Enable = true;
+УБРАТЬ ПЛЕВОК.OnEnter.Add(function(player,area){
+
+
+player.contextedProperti
+es.inventoryType.Value = false;
+
+
+player.Ui.Hint.Value ="ТЫ УБРАЛ ПЛЕВОК";
+
+
+ var БАН =
+AreaPlayerTriggerService.Get("БАН");
+БАН.Tags =["БАН"];
+БАН.Enable = true;
+БАН.OnEnter.Add(function(player.area){
+var j = Players.GetEnumerator();
+var prop = player.Properties;
+if(prop.Get("admin").Value = 
+"ВЫ НЕ АДМИНИСТРАТОР";
+}
+else{
+ var m =[];
+ while(j.moveNext()){
+  m.push(j.Current.id);
+ }
+ var sPlayer = 
+Players.Get(m[props.Get("index").Value]);
+   sPlayer.Spawns.Enable = false;
+   sPlayer.Spawns.Despawn();
+   player.Ui.Hint.Value ="ИГРОК"+
+  sPlayer.nickName +"ЗАБАНЕН";
+   PlayersBanLust.push(sPlayer.id);
+}
+});
+
+
+var РАЗБАН =
+AreaPlayerTriggerService.Get("РАЗБАН");
+РАЗБАН.Tags =["РАЗБАН"];
+РАЗБАН.Enable = true;
+РАЗБАН.OnEnter.Add(function(player){
+var j =Players.GetEnumerator();
+var prop = player.Properties;
+if(prop.Get("admin").Value!=2){
+  player.Ui.Hint.Value =
+"ВЫ НЕ АДМИНИСТРАТОР";
+}
+ else{
+   var m =[];
+   while(j.moveNext()){
+    m.push(j.Current.id);
+ }
+ var sPlayer = Player.Get(m[prop.Get ("index").Value]);
+    sPlayer.Spawns.Enable = true;
+    sPlayer.Spawns.Spawn();
+    player.Ui.Hint.Value ="ИГРОК"+
+sprayer.nickName +"РАЗБАНЕН";
+   PlayersBanLust.splice(m[prop.Get(
+"index").Value],1);
+}
+});
+var prop = Properties.GetContext();
+var ВЫБОР =
+AreaPlayerTriggerService.Get("ВЫБОР");
+ВЫБОР.Tags =["ВЫБОР"];
+ВЫБОР.Enable = true;
+ВЫБОР.OnEnter.Add(function(player){
+var j = players.Properties;
+if(prop.Get("admin").Value!=2){
+   player.Ui.Hint.Value = 
+"ВЫ НЕ АДМИНИСТРАТОР";
+}eles{
+ var m =[];
+ while(j.moveNext()){
+  m.push(j.Current.id);
+}
+if(props.Get("index").Value >=
+m.length){
+   props.Get("index").Value = 0;
+} eles { props.Get("index").Value
+]);
+player.Ui.Hint.Value ="ИГРОК"+
+sPlayer.nickName +"ВЫБРАН";
+}
+});
+
+
+var АДМИНКА =
+AreaPlayerTriggerService.Get("АДМИНКА");
+АДМИНКА.Tags =["АДМИНКА"];
+АДМИНКА.Enable = true;
+АДМИНКА.OnEnter.Add(function(player,area){
+
+
+player.Properties.Get("C").Value = 
+"<color=sky>АДМИНКА</color>"
+player.inventory.Main.Value = true;
+player.inventory.Mainlnfinity.Value = true;
+player.inventory.Secondary.Value = true;
+player.inventory.Seco
+ndarylnfinity.Value = true;
+
+
+player.inventory.Melee.Value = true;
+
+
+player.inventory.Explosive.Value = true;
+player.inventory.Explosivelnfinity.Value = true;
+
+
+player.Build.FlyEnable.Value = true;
+player.Damage.Damageln.Value = true;
+
+
+player.Ui.Hint.Value ="ТЫ ПОЛУЧИЛ АДМИНКУ";
+
+
+var СУПЕР АДМ =
+AreaPlayerTriggerService.Get("СУПЕР АДМ");
+СУПЕР АДМ.Tags =["СУПЕР АДМ"];
+СУПЕР АДМ.Enable = true;
+СУПЕР АДМ.OnEnter.Add(function(player,area){
+player.Build.Pipette.Value = true;
+
+
+player.Properties.Get("C").Value =  "<color=sky>СУПЕР АДМ</color>"
+player.contextedPrope
+rties.MaxHp.Value = 10000000000;
+player.Build.Pipette.Value = true;
+player.Build.FloodFill.Value = true;
+player.Build.FillQuad.Value = true;
+player.Build.RemoveQuad.Value = true;
+player.Build.BalkLenChange.Value = true;
+player.Build.FlyEnable.Value = true;
+player.Build.SetSkyEnable.Value = true;
+player.Build.GenMapEnable.Value = true;
+player.Build.ChangeCam
+eraPointsEnable.Value = true;
+player.Build.QuadChangeEnable.Value = true;
+player.Build.BuildModeEnable.Value = true;
+player.Build.Collapsed
+hangeEnable.Value =
+true;
+player.Build.LoadMapEnable.Value = true;
+player.Build.ChangeS
+pawnsEnable.Value = 
+true;
+player.Build.BuildRangeEnable.Value = true;
+
+
+player.inventory.Main.Value = true;
+player.inventory.Mainlnfinity.Value = true;
+player.inventory.Secondary.Value = true;
+player.inventory.Seco
+ndaryinfinity.Value = true;
+
+
+player.inventory.Melee.Value = true;
+
+
+player.inventory.Explosive.Value = true;
+player.inventory.Explosivelnfinity.Value = true;
+
+
+player.inventory.Build.Value = true;
+player.inventory.Buildlnfinity.Value = true;
+
+
+player.Build.BlocksSet.Value = BuildBlocksSet.AllClear;
+
+ var 100 =
+  AreaTriggerService.Get("100");
+ 100.Tags =["100"];
+ 100.Enable = true;
+ 100.OnEnter.add(function(player.area){
+  player.Properties.Get(LeaderBoardProp).Value += 100;
+  player.Ui.Hint.Value ="ТЫ ПОЛУЧАЕШЬ 100 МОНЕТ";
+  )};
+   
+
+                                                        
