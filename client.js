@@ -217,7 +217,7 @@ player.Build.BuildRangeEnable.Value = true;
 
 player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ АДМИНКУ"
 
-var Бан2 = 
+var БАН2 = 
 AreaPlayerTriggerService.Get("БАН2"); 
 
 
